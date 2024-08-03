@@ -3066,6 +3066,7 @@ def main() -> None:
         try:
             model_class = Model.from_model_architecture(hparams["architectures"][0])
         except NotImplementedError:
+            print("These are my hyperparameters ",hparams)
             logger.error(f"Model {hparams['architectures'][0]} is not supported")
             sys.exit(1)
 
